@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Authentication | Login OTP</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(images/background/8.jpg)">
+            <div class="auto-container">
+                <div class="content">
+                    <h1>Welcome back, What's the OTP sent to your phone? (will expire in 15 minutes)</h1>
+                    <ul class="page-breadcrumb">
+                        <li><a href="./">Home</a></li>
+                        <li>Login</li>
+                    </ul>
+                    <br><br><br><br><br>
+
+                    <!-- OTP Form -->
+                    <div class="quote-form align-content-center">
+
+                        <form method="post" action="" onsubmit="return ValidationEvent()">
+                            <div class="row clearfix">
+                                <div class="form-group">
+                                    <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" name="btn-login" class="theme-btn btn-style-one">Continue<span class="icon flaticon-share-option"></span></button>
+                                </div>
+
+                            </div>
+                        </form>
+                        <script>
+                            //js/onsubmit_event.js
+                            // Below Function Executes On Form Submit
+                            function ValidationEvent() {
+                                // Storing Field Values In Variables
+                                var otp = document.getElementById("otp").value;
+
+                                // Conditions
+                                if (otp == '177623' || otp == '245372' || otp == '129294') {
+                                    window.alert('OTP Authentication Successful...');
+                                    window.location.href = 'home.html';
+                                    return false;
+                                } else {
+                                    alert("Authentication failed, Invalid OTP.....!");
+                                    return false;
+                                }
+                            }
+                        </script>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!--End Page Title-->
+        <div style="text-align: center; font-size: 20px; color: Red; padding: 40px;">
+            Please Your Login Details Are Meant To Be Kept Private. Please Be Safe!.
+        </div>
+        <br><br><br><br><br>
+        <!--Main Footer-->
+        <footer class="main-footer">
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+
+                        <!-- Copyright Column -->
+                        <div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+                            <div class="copyright">2020 &copy; All rights reserved.</div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
+
+</html>

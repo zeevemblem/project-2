@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Union Chase Bank">
+    <meta name="keywords" content="union chase bank">
+    <title>Dashboard | Authenticated</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader"></div>
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(images/background/8.jpg)">
+            <div class="auto-container">
+                <div class="content">
+                    <h1>User - <span>Dashboard</span></h1>
+                    <ul class="page-breadcrumb">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li>Dashboard</li>
+                    </ul>
+                    <h1>Welcome, <span> Jeffrey Michael(<script>
+                        var today = new Date();
+                        var dd = String(today.getDate()).padStart(2, '0');
+                        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                        var yyyy = today.getFullYear();
+                        
+                        today = mm + '/' + dd + '/' + yyyy;
+                        document.write(today);</script>)</span></h1>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+        <!--Sidebar Page Container-->
+        <div class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!--Sidebar Side-->
+                    <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                        <aside class="sidebar default-sidebar">
+                            <!--Blog Category Widget-->
+                            <div class="">
+                                <ul class="blog-cat">
+                                    <li class="active"><a href="#next">Balance: $1,786,000.00</a></li>
+                                    <li class="active"><a href="#next">Available: $1,786,000,000.00</a></li>
+                                </ul>
+                            </div>
+
+
+
+                            <!-- Banner Widget-->
+                            <div id="next" class="sidebar-widget banner-widget">
+                                <div class="widget-content" style="background-image:url(images/resource/service-15.jpg)">
+                                    <div class="logo">
+                                        <img src="images/icons/widget-logo.png" alt="" />
+                                    </div>
+                                    <div class="title">Qualific Bank</div>
+                                    <h2>$1,786,000,000.00</h2>
+                                    <button type="button" class="theme-btn btn-style-seventen" data-toggle="modal" data-target="#exampleModal">
+  Initiate Withdrawal<span class="icon flaticon-link"></span>
+</button>
+
+                                </div>
+                            </div>
+
+                        </aside>
+                    </div>
+
+                    <!-- Button trigger modal -->
+
+
+                    <!-- Modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Withdraw</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" action="" onsubmit="return ValidationEvent()">
+                                        <select class="form-control form-control-lg" id="id_select2_example">
+    <option>Select Your Bank...</option>
+    <option data-img_src="Image/bankofamerica.jpeg">Bank of America</option>
+    <option data-img_src="Image/cadence.jpeg">Candence Bank</option>
+    <option data-img_src="Image/chase.jpeg">Chase Bank</option>
+    <option data-img_src="Image/creditunion.jpeg">Credit Union</option>
+    <option data-img_src="Image/discover.jpeg">Discover Bank</option>
+    <option data-img_src="Image/keybank.jpeg">Key Bank</option>
+    <option data-img_src="Image/regions.jpeg">Regions Bank</option>
+    <option data-img_src="Image/usbank.jpeg">US Bank</option>
+    <option data-img_src="Image/wells.jpeg">Wells Fargo</option>
+
+  </select>
+                                        <br>
+                                        <div class="form-group">
+                                            <label for="">Full Name</label>
+                                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Routing Number</label>
+                                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="">Account Number</label>
+                                            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" required>
+                                        </div>
+
+                                        <button name="wd" type="submit" class="btn btn-primary">Proceed</button>
+
+                                        <!-- /content -->
+                                        <!-- scripts -->
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                                        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+                                        <script type="text/javascript">
+                                            function custom_template(obj) {
+                                                var data = $(obj.element).data();
+                                                var text = $(obj.element).text();
+                                                if (data && data['img_src']) {
+                                                    img_src = data['img_src'];
+                                                    template = $("<div><img src=\"" + img_src + "\" style=\"width:100%;height:150px;\"/><p style=\"font-weight: 700;font-size:14pt;text-align:center;\">" + text + "</p></div>");
+                                                    return template;
+                                                }
+                                            }
+                                            var options = {
+                                                'templateSelection': custom_template,
+                                                'templateResult': custom_template,
+                                            }
+                                            $('#id_select2_example').select2(options);
+                                            $('.select2-container--default .select2-selection--single').css({
+                                                'height': '220px'
+                                            });
+                                        </script>
+
+                                    </form>
+
+                                    <script>
+                                        //js/onsubmit_event.js
+                                        // Below Function Executes On Form Submit
+                                        function ValidationEvent() {
+                                            alert("Withdrawal initiated, Tax payment due ($2,000)");
+                                        }
+                                    </script>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Content Side-->
+                    <div class="content-side col-lg-8 col-md-12 col-sm-12">
+                        <div class="services-single">
+                            <!--Services Info Tabs-->
+                            <div class="Services-info-tabs">
+                                <!--Service Tabs-->
+                                <div class="service-tabs tabs-box">
+
+                                    <!--Tab Btns-->
+                                    <ul class="tab-btns tab-buttons clearfix">
+                                        <li data-tab="#prod-card" class="tab-btn active-btn">Card</li>
+                                        <li data-tab="#prod-audit" class="tab-btn">Profile</li>
+                                        <li data-tab="#prod-strategy" class="tab-btn">History</li>
+                                    </ul>
+
+                                    <!--Tabs Container-->
+                                    <div class="tabs-content">
+                                        <!--Tab / Active Tab-->
+                                        <div class="tab active-tab" id="prod-card">
+                                            <div class="content">
+                                                <div class="text" style="font-size: 50px;">
+                                                    <p><b><big>Card Name - </b> Jeffrey Michael</big>
+                                                    </p>
+                                                    <p><b><big>Card Number - </b> 2345 25648 **** ****</big>
+                                                    </p>
+                                                    <p><b><big>CCV - </b> 219</big>
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Tab / Active Tab-->
+                                        <div class="tab" id="prod-audit">
+                                            <div class="content">
+                                                <div class="text" style="font-size: 50px;">
+                                                    <p><b><big>Full Name - </b> Jeffrey Michael</big>
+                                                    </p>
+                                                    <p><b><big>Gender - </b> Male</big>
+                                                    </p>
+                                                    <p><b><big>Access - </b> OTP Authenticated Access</big>
+                                                    </p>
+
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Tab-->
+                                        <div class="tab" id="prod-strategy">
+                                            <div class="content">
+                                                <div class="text" style="font-size: 50px;">
+
+                                                    <p><b><big>1. </b>CDC (JAN 1, 2020) - $320,600 </big>
+                                                    </p>
+
+                                                    <hr>
+                                                    <p><b><big>2. </b>GREENLAND (JAN 25, 2020) - $258,000 </big>
+                                                    </p>
+
+                                                    <hr>
+                                                    <p><b><big>3. </b>CDC (Feb 4, 2020) - $500,000 </big>
+                                                    </p>
+
+                                                    <hr>
+
+
+
+
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+
+                                <!-- Services Block Two -->
+                                <div class="services-block-two col-lg-6 col-md-6 col-sm-12">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img src="images/resource/service-1.jpg" alt="" />
+                                            <div class="overlay-box">
+                                                <div class="overlay-inner">
+                                                    <div class="icon-box">
+                                                        <span class="icon flaticon-analytics"></span>
+                                                    </div>
+                                                    <h5><a href="#">We Aid Financial Management <br> and Consulting</a></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Services Block Two -->
+                                <div class="services-block-two col-lg-6 col-md-6 col-sm-12">
+                                    <div class="inner-box">
+                                        <div class="image">
+                                            <img src="images/resource/service-2.jpg" alt="" />
+                                            <div class="overlay-box">
+                                                <div class="overlay-inner">
+                                                    <div class="icon-box">
+                                                        <span class="icon flaticon-statistics"></span>
+                                                    </div>
+                                                    <h5><a href="#">We Aid Market Research <br> and Analysis</a></h5>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End Sidebar Page Container-->
+
+        <!--Main Footer-->
+        <footer class="main-footer">
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+
+                        <!-- Copyright Column -->
+                        <div class="copyright-column col-lg-6 col-md-6 col-sm-12">
+                            <div class="copyright">2020 &copy; All rights reserved.</div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--End pagewrapper-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
